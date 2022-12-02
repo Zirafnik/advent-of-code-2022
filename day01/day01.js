@@ -1,8 +1,6 @@
-const fs = require('fs');
+const readData = require('../helpers');
 
-const rawData = fs.readFileSync('./day01/input.txt');
-
-const inventories = rawData.toString().split(/\n/);
+const inventories = readData('01');
 
 function getHighestSubarraySum(inventories) {
     let currentCalories = 0;
