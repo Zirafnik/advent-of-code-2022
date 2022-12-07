@@ -7,4 +7,17 @@ function readData(day, testBool) {
     return dataArray;
 }
 
-module.exports = readData;
+function accessObjectChild(path) {
+    let child = this;
+    
+    for(const prop of path) {
+        child = child[prop];
+    }
+    
+    return child;
+}
+
+module.exports = {
+    readData,
+    accessObjectChild,
+};
